@@ -39,7 +39,9 @@ nav{
     border-radius: 50%;
     margin-right: 0;
 }
-
+.nav-right .search{
+    display: none;
+}
 .nav-left .menu-icon{
     width: 22px;
     margin-right: 25px;
@@ -148,6 +150,13 @@ nav{
     padding-bottom: 20px;
 }
 
+.large-container{
+    padding-left: 7%;
+}
+.large-container .list-container{
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
 .banner{
     width: 100%;
 }
@@ -155,4 +164,62 @@ nav{
 .banner img{
     width: 100%;
     border-radius: 8px;
+}
+.list-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    grid-column-gap:15px ;
+    grid-row-gap:30px ;
+    margin-top: 15px;
+}
+
+.vid-list .thumbnail{
+    width: 100%;
+    border-radius: 5px;
+}
+.vid-list .flex-div{
+    align-items: flex-start;
+    margin-top: 7px;
+}
+.vid-list .flex-div img{
+    width: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.vid-info{
+    color: #5a5a5a;
+    font-size: 13px;
+}
+.vid-info a{
+    color: black;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+/* responsiveness*/
+@media (max-width:900px){
+    .menu-icon{
+        display: none;
+    }
+    .sidebar{
+        display: none;
+    }
+    .container, .large-container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .nav-right img{
+        display: none;
+    }
+    .nav-middle{
+        display: none;
+    }
+    .nav-right .notification{
+        display: block;
+    }
+    .nav-right .search{
+        display: block;
+        width: 20px;
+    }
 }
