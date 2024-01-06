@@ -197,6 +197,9 @@ nav{
     margin-bottom: 5px;
     font-size: 15px;
 }
+.nav-mobile{
+    display: none;   
+}
 /* responsiveness*/
 @media (max-width:900px){
     .menu-icon{
@@ -221,5 +224,26 @@ nav{
     .nav-right .search{
         display: block;
         width: 20px;
+    }
+    .nav-mobile{
+        display: block;
+        position: sticky;
+        bottom: 0;
+        background-color: #fff;
+    }
+    .nav-mobile .nav-mobile-main{
+        justify-content: space-between;
+    }
+    .nav-mobile .user-icon{
+        width: 35px;
+        border-radius: 50%;
+        margin: 15px;
+    }
+    .nav-mobile .subscription,.home{
+        width: 25px;
+        margin: 15px;
+    }
+    .banner{
+        display: none;
     }
 }
